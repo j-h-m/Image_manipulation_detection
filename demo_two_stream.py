@@ -32,7 +32,8 @@ CLASSES = ('__background__',
            'tampered')
 
 # PLEASE specify weight files dir for vgg16
-NETS = {'vgg16': ('vgg16_faster_rcnn_iter_750.ckpt',), 'res101': ('res101_faster_rcnn_iter_110000.ckpt',)}
+# change # of iterations
+NETS = {'vgg16': ('vgg16_faster_rcnn_iter_30000.ckpt',), 'res101': ('res101_faster_rcnn_iter_110000.ckpt',)}
 DATASETS = {'pascal_voc': ('voc_2007_trainval',), 'pascal_voc_0712': ('voc_2007_trainval+voc_2012_trainval',)}
 
 
@@ -117,6 +118,9 @@ if __name__ == '__main__':
     demonet = args.demo_net
     dataset = args.dataset
     tfmodel = os.path.join('default', 'DIY_dataset', 'default', NETS[demonet][0])
+
+    print(f'tfmodel: {str(tfmodel)}')
+    print()
 
     # if not os.path.isfile(tfmodel + '.meta'):
     #     print(tfmodel)

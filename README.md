@@ -9,6 +9,9 @@ This is a rough implementation of the paper. Since I do not have a titan gpu, I 
 Python 3.6
 TensorFlow 1.8.0
 
+# Data
+ - http://host.robots.ox.ac.uk/pascal/VOC/voc2007/
+
 # Setup
 - Download vgg16 pre-trained weights from [here](http://download.tensorflow.org/models/vgg_16_2016_08_28.tar.gz)
     - save to /data/imagenet_weights/vgg16.ckpt
