@@ -19,8 +19,16 @@ images_path = os.sep.join([dataset_path, 'JPEGImages'])
 image_annotation_path = os.sep.join([dataset_path, 'Annotations'])
 
 save_path = os.sep.join(['data', 'DIY_dataset', 'VOC2007'])
+if not os.path.exists(save_path):
+    os.makedirs(save_path)
+
 save_imgage_path = os.sep.join([save_path, 'JPEGImages'])
+if not os.path.exists(save_imgage_path):
+    os.makedirs(save_imgage_path)
+
 save_annotation_path = os.sep.join([save_path, 'Annotations'])
+if not os.path.exists(save_annotation_path):
+    os.makedirs(save_annotation_path)
 
 imdb = get_imdb("voc_2007_trainval")
 roidb = imdb.roidb
